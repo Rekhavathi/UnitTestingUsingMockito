@@ -1,7 +1,11 @@
 •	Create Product microservice and Coupon microservice
+
 •	These two services(Product and Coupon) will expose restful API which will allow the end user to create a product and in the process, the Product service will use the Coupon service to apply the “couponcode” that the client passes in and gets the discount.
+
 •	Coupon information is maintained by the Coupon service
+
 •	Product Service is responsible for creating the product along with its price and description details which the client passes.
+
 •	So, the process here is 
 o	Take the client’s request
 o	The product service will call the coupon service
