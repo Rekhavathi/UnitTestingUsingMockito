@@ -1,0 +1,39 @@
+package com.test.springcloud;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.test.springcloud.controllers.CouponRestController;
+import com.test.springcloud.model.Coupon;
+import com.test.springcloud.repos.CouponRepo;
+
+@SpringBootTest
+class CouponserviceApplicationTests {
+
+	@Mock
+	private CouponRepo repo;
+	
+	@InjectMocks
+	private CouponRestController controller;
+	
+	@Test
+	public void testCreate() {
+		Coupon coupon = new Coupon();
+		coupon.setCode("sale");
+		when(repo.save(coupon)).thenReturn(coupon);
+		Coupon couponCreated = controller.create(coupon);
+		verify(repo).save(coupon);
+		assertNotNull(couponCreated);
+		assertEquals("sale",coupon.getCode());
+		
+		
+	}
+
+}

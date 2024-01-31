@@ -1,0 +1,16 @@
+package com.test.springcloud;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.test.springcloud.controllers.CouponRestController;
+
+@SpringBootTest
+class CouponserviceApplicationTests {
+
+	@Test
+	public void testCreate() {
+		CouponRestController couponRestController = new CouponRestController();
+	}
+
+}

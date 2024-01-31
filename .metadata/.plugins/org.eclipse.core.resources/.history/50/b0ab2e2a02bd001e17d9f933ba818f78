@@ -1,0 +1,28 @@
+package com.test.springcloud.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.test.springcloud.model.Product;
+import com.test.springcloud.repo.ProductRepo;
+
+@RestController
+@RequestMapping("/productapi")
+public class ProductRestController {
+	
+	@Autowired
+	private ProductRepo repo;
+	
+	@PostMapping("/coupons")
+	public Product create(@RequestBody Product product)
+	{
+		if (product == null) {
+			throw new IllegalArgumentException("product is required");
+		}
+		return repo.save(product);
+	}
+
+}

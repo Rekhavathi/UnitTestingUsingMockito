@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;SALE&apos; from expression &apos;&quot;sale&quot;&apos;&#x0D;&#x0A;- Original project: &apos;couponservice&apos;&#x0D;&#x0A;- Constant name: &apos;SALE&apos;&#x0D;&#x0A;- Constant expression: &apos;&quot;sale&quot;&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Replace occurrences of expression with constant" description="Extract constant &apos;SALE&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.test.springcloud{CouponserviceApplicationTests.java" name="SALE" qualify="false" replace="true" selection="957 6" stamp="1706359011211" version="1.0" visibility="2"/>
+</session>

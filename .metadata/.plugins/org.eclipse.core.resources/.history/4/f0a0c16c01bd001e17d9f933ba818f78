@@ -1,0 +1,3 @@
+spring.datasource.url=jdbc:sql://localhost:3306/mydb
+spring.datasource.username=root
+spring.datasource.password=root
